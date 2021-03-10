@@ -18,7 +18,7 @@ class Win_DownloadImg(QDialog):
         self.ui.btn_exit.clicked.connect(self.close)
 
         self.show()
-    
+
     #Inicia la descarga por capitulo.
     def StartDownload(self):
         try:
@@ -133,14 +133,14 @@ class Win_DownloadImg(QDialog):
             self.ui.ptx_out.setPlainText("No has colocado un rango de capitulos correcto.")
         except KeyError:
             self.ui.ptx_out.setPlainText("No existen los capitulos.\n¡Revisa el enlace o el rango!")
-    
+
     #Activa el sonido al acabar la descarga.
     def OnSoundFinish(self):
         try:
             playsound("sounds\\finish-him.mp3")
         except:
             playsound("sounds/finish-him.mp3")
-    
+
     #Abre la carpeta del programa.
     def OpenDir(self):
         path = os.getcwd()
