@@ -1,0 +1,83 @@
+*{	
+	font: 11pt "Century Gothic";
+}
+
+#background{
+	background-image: url(:/Images/imgs/background_paisaje.jpg);
+	border-radius: 15px;
+}
+
+#lbl_url{
+	font: italic 11pt "Century Gothic";
+}
+
+#btn_exit{
+	color:white;
+	background:rgba(170, 0, 0, .8);
+	border-radius: 15px;
+}
+
+#btn_exit:hover{
+	color:white;
+	background:rgba(87, 35, 100, .5);
+	border-radius: 15px;
+}
+
+QSpinBox{
+	background:transparent;
+	border:none;
+	color:#ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+QSpinBox::up-button { 
+	width: 0px;
+}
+QSpinBox::down-button {
+	width: 0px;
+}
+
+QLabel{
+	color:white;
+}
+
+QProgressBar{
+	background:transparent;
+	border-radius: 5px;
+	border: 1px solid #ffffff;
+	color:rgba(255, 255, 255, 0)
+}
+
+QProgressBar::chunk{
+	background:white;
+	border-radius: 5px;
+	width: 10px;
+    margin: 1px;
+}
+
+QLineEdit{
+	background:transparent;
+	border:none;
+	color:#ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+QPushButton{
+	color:black;
+	background:rgba(255, 255, 255, .8);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color:white;
+	background:rgba(87, 35, 100, .5);
+	border-radius: 15px;
+}
+
+QPlainTextEdit{
+	border: 1px solid #ffffff;
+	background-color: rgba(70, 70, 70, .2);
+	border-radius: 15px;
+	font: 75 11pt "Century Gothic";
+    color:white;
+}
