@@ -15,6 +15,7 @@ class Download_TMO(Connect_Web):
 
         self.DownloadImgChapter()
 
+    #Obtiene los datos del capitulo.
     def GetDataChapter(self):
         dataH1 = self.soup.find('div', class_='row align-items-center').h1.get_text()
         dataH2 = self.soup.find('div', class_='row align-items-center').h2.get_text()
@@ -25,11 +26,12 @@ class Download_TMO(Connect_Web):
 
         return self.dataFinal
     
+    #Obtiene las imagenes del capitulo.
     def DownloadImgChapter(self):
         infoCh = self.GetDataChapter()
 
-        self.dirMain = infoCh[0].replace(':\xa0', ' - ')
-        self.dirChapter = infoCh[1].replace(':\xa0', ' - ')
+        self.dirMain = infoCh[0].replace(':\xa0', ' - ').replace('|', '')
+        self.dirChapter = infoCh[1].replace(':\xa0', ' - ').replace('|', '')
 
         for a in self.dirMain:
             if a == ':':
@@ -58,6 +60,7 @@ class Download_Multi_TMO(Connect_Web):
         super().__init__(url)
         #print(self.GetUrlChapter())
 
+    #Obtiene los enlaces de todos los capitulos.
     def GetUrlChapter(self):
         chapters = {}
         urlChs = [] 
