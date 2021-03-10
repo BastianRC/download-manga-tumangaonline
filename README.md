@@ -19,6 +19,9 @@ O instalar:
 * soupsieve==2.2
 * urllib3==1.25.11
 
+# Descargar todos los capitulos.
+Para esto solo es necesario poner un rango mayor que los capitulos existentes, una vez no haya capitulos para descargar, el programa se detendra.
+
 # Modificar fondo.
 Es posible modificar el fondo, para ello se necesita seguir estos pasos.
 
