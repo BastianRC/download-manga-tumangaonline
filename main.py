@@ -18,8 +18,9 @@ class Win_DownloadImg(QDialog):
         self.ui.btn_exit.clicked.connect(self.close)
 
         self.show()
-
-    def StartDownload(self, multi = False):
+    
+    #Inicia la descarga por capitulo.
+    def StartDownload(self):
         try:
             if self.ui.lnl_url.text() != "" and self.ui.lnl_urlPro.text() == "":
                 count = 0
@@ -74,6 +75,7 @@ class Win_DownloadImg(QDialog):
         except AttributeError:
             self.ui.ptx_out.setPlainText("Hay un problema con el enlace.")
     
+    #Inicia la descarga multiple.
     def StartMultiDownload(self):
         count = 0
         tmo = Download_Multi_TMO(self.ui.lnl_urlPro.text())
@@ -131,13 +133,15 @@ class Win_DownloadImg(QDialog):
             self.ui.ptx_out.setPlainText("No has colocado un rango de capitulos correcto.")
         except KeyError:
             self.ui.ptx_out.setPlainText("No existen los capitulos.\n¡Revisa el enlace o el rango!")
-
+    
+    #Activa el sonido al acabar la descarga.
     def OnSoundFinish(self):
         try:
             playsound("sounds\\finish-him.mp3")
         except:
             playsound("sounds/finish-him.mp3")
-
+    
+    #Abre la carpeta del programa.
     def OpenDir(self):
         path = os.getcwd()
         webbrowser.open(os.path.realpath(path))
