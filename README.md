@@ -4,10 +4,10 @@ Descarga capitulos de TuMangaOnline
 # Requisitos necesarios.
 Usar pip3 install -r REQUIREMENTS.txt
 
-o instalar:
+O instalar:
 
-beautifulsoup4==4.9.3
-bs4==0.0.1
+* beautifulsoup4==4.9.3
+* bs4==0.0.1
 certifi==2020.12.5
 chardet==3.0.4
 idna==2.8
