@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DownloadIMG</class>
+ <widget class="QDialog" name="DownloadIMG">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>611</width>
+    <height>411</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{	
+	font: 11pt &quot;Century Gothic&quot;;
+}
+
+#background{
+	background-image: url(:/Images/imgs/background_paisaje.jpg);
+	border-radius: 15px;
+}
+
+#lbl_url{
+	font: italic 11pt &quot;Century Gothic&quot;;
+}
+
+#btn_exit{
+	color:white;
+	background:rgba(170, 0, 0, .8);
+	border-radius: 15px;
+}
+
+#btn_exit:hover{
+	color:white;
+	background:rgba(87, 35, 100, .5);
+	border-radius: 15px;
+}
+
+QSpinBox{
+	background:transparent;
+	border:none;
+	color:#ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+QSpinBox::up-button { 
+	width: 0px;
+}
+QSpinBox::down-button {
+	width: 0px;
+}
+
+QLabel{
+	color:white;
+}
+
+QProgressBar{
+	background:transparent;
+	border-radius: 5px;
+	border: 1px solid #ffffff;
+	color:rgba(255, 255, 255, 0)
+}
+
+QProgressBar::chunk{
+	background:white;
+	border-radius: 5px;
+	width: 10px;
+    margin: 1px;
+}
+
+QLineEdit{
+	background:transparent;
+	border:none;
+	color:#ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+QPushButton{
+	color:black;
+	background:rgba(255, 255, 255, .8);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color:white;
+	background:rgba(87, 35, 100, .5);
+	border-radius: 15px;
+}
+
+QPlainTextEdit{
+	border: 1px solid #ffffff;
+	background-color: rgba(70, 70, 70, .2);
+	border-radius: 15px;
+	font: 75 11pt &quot;Century Gothic&quot;;
+	color:white;
+}</string>
+  </property>
+  <widget class="QFrame" name="background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>611</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="vly_one">
+     <item>
+      <widget class="QLineEdit" name="lnl_url">
+       <property name="placeholderText">
+        <string>Enlace del capitulo</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_url">
+       <property name="font">
+        <font>
+         <family>Century Gothic</family>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ej: https://lectortmo.com/viewer/5af61094f3d49/cascade</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPlainTextEdit" name="ptx_out">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>591</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_download">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>360</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Iniciar Descarga</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dir">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>360</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Abrir Carpeta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>360</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>591</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="format">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_ej_two">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>531</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ej: https://lectortmo.com/library/manhua/12266/dou-po-cang-qiong</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>401</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="hly_one">
+     <item>
+      <widget class="QLineEdit" name="lnl_urlPro">
+       <property name="placeholderText">
+        <string>Enlace del manga</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>80</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="hly_two">
+     <item>
+      <widget class="QSpinBox" name="sbx_min">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_one">
+       <property name="text">
+        <string>Hasta</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="sbx_max">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>
