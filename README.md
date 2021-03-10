@@ -1,8 +1,8 @@
 # Download-Chapter-TuMangaOnline.
-Descarga capitulos de TuMangaOnline
+Descarga capitulos de TuMangaOnline.
 
 # Requisitos necesarios.
-Usar pip3 install -r REQUIREMENTS.txt
+Usar pip3 install -r REQUIREMENTS.txt.
 
 O instalar:
 
@@ -22,6 +22,14 @@ O instalar:
 # Modificar fondo.
 Es posible modificar el fondo, para ello se necesita seguir estos pasos.
 
-* Sobreescribir (mismo nombre) la imagen en la carpeta *imgs* (el tamaño debe ser 611x411)
-* Eliminar el archivo *source_rc.py*
-* Abrir una terminal (o cmd) y ejecutar *pyrcc5 source.qrc -o source_rc.py*
+* Sobreescribir (mismo nombre) la imagen en la carpeta *imgs* (el tamaño debe ser 611x411).
+* Eliminar el archivo *source_rc.py*.
+* Abrir una terminal (o cmd) y ejecutar *pyrcc5 source.qrc -o source_rc.py*.
+
+# Modificar estilos.
+Accediendo al archivo *style.css* podemos cambiar cada parte del diseño actual del programa.
+
+# Modificando sonido final.
+Pasos a seguir:
+
+* Sobreescribir (mismo nombre) el fichero *finish-him.mp3* (tiene que ser el mismo formato).
