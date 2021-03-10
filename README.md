@@ -21,4 +21,5 @@ O instalar:
 
 # Modificar fondo.
 Es posible modificar el fondo, para ello solo necesitamos editar el archivo style.css, la linea 6.
-Importante que la imagen tenga un tamaño de *611x411*
+
+*Importante que la imagen tenga un tamaño de 611x411
