@@ -1,4 +1,4 @@
-# Download-Chapter-TuMangaOnline.
+# Download-Manga-TuMangaOnline.
 Descarga capitulos de TuMangaOnline.
 
 # Requisitos necesarios.
